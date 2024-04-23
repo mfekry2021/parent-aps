@@ -11,9 +11,9 @@ enum StatusCode: int
     public static function getNames(): array
     {
         return [
-            "authorised" => self::Authorized,
-            "decline" => self::Declined,
-            "refunded" => self::Refunded
+            "authorised" => self::Authorized->value,
+            "decline" => self::Declined->value,
+            "refunded" => self::Refunded->value
         ];
     }
 }

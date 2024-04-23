@@ -3,6 +3,7 @@
 namespace App\Services\Filters;
 
 use App\Enums\DataProvider;
+use App\Enums\StatusCode;
 use App\Services\DataProvider\DataProviderReader;
 use App\Services\Filters\Interfaces\FilterInterface;
 
@@ -31,6 +32,8 @@ class Filter implements FilterInterface
                 return $this->filterByMinBalance(query: $query, balance: $inputs['balanceMin']);
             })->when(!empty($inputs['balanceMax']), function ($query) use ($inputs) {
                 return $this->filterByMaxBalance(query: $query, balance: $inputs['balanceMax']);
+            })->when(!empty($inputs['statusCode']), function ($query) use ($inputs) {
+                return $this->filterByStatusCode(query: $query, statusCode: $inputs['statusCode']);
             })->all();
     }
 
@@ -72,5 +75,10 @@ class Filter implements FilterInterface
     private function filterByMaxBalance($query, float $balance): mixed
     {
         return $query->where('balance', '<=', $balance);
+    }
+
+    private function filterByStatusCode($query, string $statusCode): mixed
+    {
+        return $query->where('status_code', StatusCode::getNames()[$statusCode]);
     }
 }

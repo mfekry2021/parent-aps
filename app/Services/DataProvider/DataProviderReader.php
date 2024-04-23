@@ -55,6 +55,7 @@ class DataProviderReader implements DataProviderReaderInterface
                         if ($userObject) {
                             $data[] = $userObject;
                         }
+                        $stringObject = "";
                     }
                 }
             }

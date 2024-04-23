@@ -18,7 +18,8 @@ class UsersController extends Controller
     public function __invoke(FilterRequest $request, Filter $filter): JsonResponse
     {
         $results = $filter->filter($request->all());
-        return response()->json(ProviderDataResource::collection($results));
-
+        return response()->json([
+                "users" => ProviderDataResource::collection($results)]
+        );
     }
 }

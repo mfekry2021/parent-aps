@@ -22,8 +22,8 @@ class FilterTest extends TestCase
 
         // Set up a sample dataset
         $data = [
-            ['id' => 1, 'currency' => 'USD', 'provider' => 'DataProviderX', 'balance' => 200],
-            ['id' => 2, 'currency' => 'EUR', 'provider' => 'DataProviderY', 'balance' => 300],
+            ['id' => 1, 'currency' => 'USD', 'provider' => 'DataProviderX', 'balance' => 200, 'status_code' => 1],
+            ['id' => 2, 'currency' => 'EUR', 'provider' => 'DataProviderY', 'balance' => 300, 'status_code' => 2],
             // Add more sample data as needed
         ];
 
@@ -45,6 +45,7 @@ class FilterTest extends TestCase
         $this->assertCount(1, $filteredData);
         $this->assertEquals(1, $filteredData[0]['id']);
         $this->assertEquals('USD', $filteredData[0]['currency']);
+        $this->assertEquals(1, $filteredData[0]['status_code']);
     }
 
     /**

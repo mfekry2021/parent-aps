@@ -11,7 +11,7 @@
         "parentAmount": 200,
         "Currency": "USD",
         "parentEmail": "parent1@parent.eu",
-        "statusCode": 1,
+        "statusCode": 2,
         "registrationDate": "2018-11-30",
         "parentIdentification": "d3d29d70-1d25-11e3-8591-034165a3a613"
     },
@@ -27,7 +27,7 @@
         "parentAmount": 200,
         "Currency": "USD",
         "parentEmail": "parent1@parent.eu",
-        "statusCode": 1,
+        "statusCode": 3,
         "registrationDate": "2018-11-30",
         "parentIdentification": "d3d29d70-1d25-11e3-8591-034165a3a613"
     },

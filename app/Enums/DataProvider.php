@@ -21,6 +21,9 @@ enum DataProvider: int
         };
     }
 
+    /**
+     * @return array{DataProviderX: int, DataProviderY: int}
+     */
     public static function getNames(): array
     {
         return [
