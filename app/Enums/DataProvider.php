@@ -24,8 +24,8 @@ enum DataProvider: int
     public static function getNames(): array
     {
         return [
-            "DataProviderX"=> self::DataProviderX,
-            "DataProviderY"=> self::DataProviderY
+            "DataProviderX"=> self::DataProviderX->value,
+            "DataProviderY"=> self::DataProviderY->value
         ];
     }
 

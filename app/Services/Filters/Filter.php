@@ -46,10 +46,10 @@ class Filter implements FilterInterface
 
     /**
      * @param $query
-     * @param int $provider
+     * @param string $provider
      * @return mixed
      */
-    private function filterByProvider($query, int $provider): mixed
+    private function filterByProvider($query, string $provider): mixed
     {
         return $query->where('provider', DataProvider::getNames()[$provider]);
     }
